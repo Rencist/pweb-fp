@@ -15,8 +15,9 @@
       <a href="tutors.php" class="nav-item">tutors</a>
       <a href="partners.php" class="nav-item">partners</a>
       <a href="admissions.php" class="nav-item">admissions</a>
-      <a href="contact.php" class="nav-item active">contact</a>
-      <a href="signup.php" class="btn signup-btn">Sign Up</a>
+      <a href="contact.php" class="nav-item">contact</a>
+      <a href="login.php" class="btn nav-btn">Log In</a>
+      <a href="signup.php" class="btn nav-btn">Sign Up</a>
     </div>
   </nav>
   <main>

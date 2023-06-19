@@ -21,23 +21,13 @@
     </div>
   </nav>
   <main>
-    <form method="post" action="/backend_daftar_user.php">
-      <h1 class="form-title">Daftar</h1>
+    <form method="post" action="/backend_masuk_user.php">
+      <h1 class="form-title">Masuk</h1>
 
       <div class="form-list">
         <div class="input">
-          <p class="input-label">Nama</p>
-          <input type="text" class="input-form" placeholder="Masukkan Nama" name="nama">
-        </div>
-
-        <div class="input">
           <p class="input-label">Email</p>
           <input type="text" class="input-form" placeholder="Masukkan Email" name="email">
-        </div>
-
-        <div class="input">
-          <p class="input-label">Nomor Telepon</p>
-          <input type="text" class="input-form" placeholder="Masukkan Nomor Telepon" name="no_telp">
         </div>
 
         <div class="input">
@@ -45,7 +35,7 @@
           <input type="password" class="input-form" placeholder="Masukkan Kata Sandi" name="password">
         </div>
 
-        <input type="submit" class="btn submit-btn" value="Daftar" name="daftar_user" />
+        <input type="submit" class="btn submit-btn" value="Masuk" name="masuk_user" />
       </div>
     </form>
   </main>
