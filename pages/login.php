@@ -9,7 +9,7 @@
 </head>
 <body>
   <nav>
-    <h1 class="logo">E-Learning</h1>
+    <a href="/index.php" class="logo">E-Learning</a>
     <div class="nav-list">
       <a href="courses.php" class="nav-item">courses</a>
       <a href="tutors.php" class="nav-item">tutors</a>

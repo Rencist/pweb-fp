@@ -1,13 +1,13 @@
 <?php
   include("../config.php");
-  if (!isset($_GET['id'])) {
+  if (!isset($_GET['course_id'])) {
     header("Location: /pages/courses.php");
   }
 ?>
 
-<?php if (isset($_GET['id'])): ?>
+<?php if (isset($_GET['course_id'])): ?>
 <?php
-  $sql = "SELECT c.id, c.nama, c.deskripsi, c.harga, c.durasi, t.nama as tutor, p.nama as 'partner' FROM course c JOIN (SELECT id, nama FROM tutor) t ON c.tutor_id=t.id JOIN (SELECT id, nama FROM partner) p ON c.partner_id=p.id WHERE c.id=".$_GET['id'];
+  $sql = "SELECT c.id, c.nama, c.deskripsi, c.harga, c.durasi, t.nama as tutor, p.nama as 'partner' FROM course c JOIN (SELECT id, nama FROM tutor) t ON c.tutor_id=t.id JOIN (SELECT id, nama FROM partner) p ON c.partner_id=p.id WHERE c.id=".$_GET['course_id'];
   $query = mysqli_query($db, $sql);
 
   if (!$query) {
@@ -26,20 +26,29 @@
   <title>Pendaftaran | E-Learning</title>
 </head>
 <body>
-  <nav>
-    <h1 class="logo">E-Learning</h1>
+  <nav> 
+    <a href="/index.php" class="logo">E-Learning</a>
     <div class="nav-list">
       <a href="courses.php" class="nav-item">courses</a>
       <a href="tutors.php" class="nav-item">tutors</a>
       <a href="partners.php" class="nav-item">partners</a>
       <a href="admissions.php" class="nav-item active">admissions</a>
       <a href="contact.php" class="nav-item">contact</a>
-      <a href="login.php" class="btn nav-btn">Log In</a>
-      <a href="signup.php" class="btn nav-btn">Sign Up</a>
+      <?php if (!isset($_GET['user_id'])): ?>
+        <a href="login.php" class="btn nav-btn">Log In</a>
+        <a href="signup.php" class="btn nav-btn">Sign Up</a>
+      <?php else: ?>
+        <?php
+          $sql_nav = "SELECT nama FROM `user` WHERE id=".$_GET['user_id'];
+          $query_nav = mysqli_query($db, $sql_nav);
+          $user = mysqli_fetch_assoc($query_nav);
+        ?>
+        <button class="btn nav-btn" onclick="logout()">Log Out <?php echo $user['nama'] ?></button>
+      <?php endif; ?>
     </div>
   </nav>
   <main>
-    <form method="post" action="/backend_pendaftaran_kursus.php">
+    <form method="post" action="/backend_admission.php">
       <h1 class="form-title">Pendaftaran</h1>
 
       <div class="form-list">
@@ -66,10 +75,14 @@
           </div>
         </div>
 
-        <input type="submit" class="btn submit-btn" value="Daftar Kursus" name="daftar_kursus" />
+        <input type="hidden" name="user_id" value="<?php if (isset($_GET['user_id'])) echo $_GET['user_id'] ?>">
+        <input type="hidden" name="course_id" value="<?php echo $_GET['course_id'] ?>">
+        <input type="submit" class="btn submit-btn" value="Daftar Kursus" name="admission" />
       </div>
     </form>
   </main>
+
+  <script src="../scripts/main.js"></script>
 </body>
 </html>
 <?php endif; ?>

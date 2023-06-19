@@ -1,113 +1,62 @@
+@import "global.css";
 
-body{
-    background-color: #F9FAFB;
-    font-family: 'Montserrat';
-    max-height: 100vh;
-    margin: 0;
+main {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
 }
 
-a:link, a:visited, a:hover, a:active{
-    text-decoration: none;
+.main-div {
+  max-height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px;
+  gap: 32px;
 }
 
-.container{
-    width: 80%;
-    max-width: 80%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
+.main-div h1 {
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-size: 96px;
+  line-height: 96px;
+
+  color: #42675a;
 }
 
-.logo{
-    color: #F9FAFB;
-    font-size: 2rem;
-    margin: auto 0;
-    font-weight: 600;
+.main-div p {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #42675a;
 }
 
-nav {
-    background-color: #42675A;
-    border-bottom-left-radius: 5%;
-    border-bottom-right-radius: 5%;
-    max-height: 6rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
+.main-div-button {
+  display: flex;
+  padding: 0px;
+  gap: 24px;
 }
 
-.navbar {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    margin: 2rem 0rem;
-    gap: 0 1rem;
-    font-size: 1.5rem;
+.main-div-join-now {
+  padding: 10px 28px;
+  border: 2px solid #5b8e7d;
 }
 
-.navbar li a:not(.sign-up-button){
-    color: #5B8E7D;
+.main-div-browse-course {
+  padding: 10px 28px;
+  border: 2px solid #5b8e7d;
+  background-color: transparent;
+  color: #5b8e7d;
+  transition: color 0.2s ease-in-out;
 }
 
-.navbar li a{
-    transition: color 0.2s ease-in-out;
-}
-.navbar li a:hover{
-    color:#f9fafb;
-}
-
-.sign-up-button{
-    margin: auto 0 auto 1rem;
-    background-color: #5B8E7D;
-    color: #F9FAFB;
-    font-size: 1rem;
-    padding: 10px 28px;
-    transition: background-color 0.2s ease-out;
-}
-
-.sign-up-button:hover{
-    background-color: #4d796a;
-}
-
-.main-div{
-    max-height: calc(100vh-6rem);
-    width: 50%;
-    margin: auto 0;
-}
-
-.main-div h1{
-    font-size: 5rem;
-    font-weight: 900;
-    color: #42675A;
-    margin-bottom: 0;
-}
-
-.main-div p{
-    margin-top: 1rem;
-    font-weight: 400;
-    color: #42675A;
-    font-size: 1rem;
-    margin-bottom: 2rem;
-}
-
-.main-div-join-now{
-    padding: 0.7rem;
-    margin-right: 1rem;
-    background-color: #5B8E7D;
-    border-radius: 5px;
-    font-size: 1rem;
-    color: #F9FAFB;
-}
-
-.main-div-browse-course{
-    padding: 0.7rem;
-    border: 2px solid #5B8E7D;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.main-image{
-    margin: auto 0 auto auto;
-    width: 50vh;
-    max-height: 50vh;
+.main-div-browse-course:hover {
+  color: #f9fafb;
+  background-color: #5b8e7d;
 }

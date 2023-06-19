@@ -1,3 +1,7 @@
+<?php
+  include("../config.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,15 +13,24 @@
 </head>
 <body>
   <nav>
-    <h1 class="logo">E-Learning</h1>
+    <a href="/index.php" class="logo">E-Learning</a>
     <div class="nav-list">
       <a href="courses.php" class="nav-item">courses</a>
       <a href="tutors.php" class="nav-item">tutors</a>
       <a href="partners.php" class="nav-item">partners</a>
       <a href="admissions.php" class="nav-item">admissions</a>
-      <a href="contact.php" class="nav-item">contact</a>
-      <a href="login.php" class="btn nav-btn">Log In</a>
-      <a href="signup.php" class="btn nav-btn">Sign Up</a>
+      <a href="contact.php" class="nav-item active">contact</a>
+      <?php if (!isset($_GET['user_id'])): ?>
+        <a href="login.php" class="btn nav-btn">Log In</a>
+        <a href="signup.php" class="btn nav-btn">Sign Up</a>
+      <?php else: ?>
+        <?php
+          $sql_nav = "SELECT nama FROM `user` WHERE id=".$_GET['user_id'];
+          $query_nav = mysqli_query($db, $sql_nav);
+          $user = mysqli_fetch_assoc($query_nav);
+        ?>
+        <button class="btn nav-btn" onclick="logout()">Log Out <?php echo $user['nama'] ?></button>
+      <?php endif; ?>
     </div>
   </nav>
   <main>
@@ -35,10 +48,12 @@
           <textarea type="text" class="input-form" placeholder="Tulis pesaan di sini ..." name="pesan"></textarea>
         </div>
 
-        <input type="hidden" name="user_id" />
+        <input type="hidden" name="user_id" value="<?php if (isset($_GET['user_id'])) echo $_GET['user_id'] ?>">
         <input type="submit" class="btn submit-btn" value="Kirim Pesan" name="kontak_kami" />
       </div>
     </form>
   </main>
+
+  <script src="../scripts/main.js"></script>
 </body>
 </html>

@@ -7,7 +7,7 @@ if(isset($_POST['admission'])){
 
     // ambil data dari formulir
     $user_id = $_POST['user_id'];
-    $tanggal_daftar = $_POST['tanggal_daftar'];
+    $tanggal_daftar = date("Y-m-d");
     $course_id = $_POST['course_id'];
 
     // buat query
