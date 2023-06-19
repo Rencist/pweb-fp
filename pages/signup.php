@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/centered-main.css">
-  <title>Sign Up | E-Learning</title>
+  <title>Daftar | E-Learning</title>
 </head>
 <body>
   <nav>
