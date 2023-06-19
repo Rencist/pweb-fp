@@ -13,12 +13,12 @@
         <div class="container">
             <a href="/#" class="logo">E-Learning</a>
             <ul class="navbar">
-                <li><a href="/#">courses</a></li>
-                <li><a href="/#">tutors</a></li>
-                <li><a href="/#">partners</a></li>
-                <li><a href="/#">admissions</a></li>
-                <li><a href="/#">contact</a></li>
-                <li><a href="/#" class="sign-up-button">Sign Up</a></li>
+                <li><a href="/pages/courses.php">courses</a></li>
+                <li><a href="/pages/tutors.php">tutors</a></li>
+                <li><a href="/pages/partners.php">partners</a></li>
+                <li><a href="/pages/admissions.php">admissions</a></li>
+                <li><a href="/pages/contact.php">contact</a></li>
+                <li><a href="/pages/signup.php" class="sign-up-button">Sign Up</a></li>
             </ul>
         </div>
     </nav>
@@ -27,7 +27,7 @@
             <h1>Learn without limits</h1>
             <p>Start, switch, or advance your career with more than 5,800 courses, Professional Certificates, and degrees from world-class universities and companies.</p>
             <div class="main-div-button">
-                <a class="main-div-join-now">Join Now</a>
+                <a class="main-div-join-now" href="/pages/login.php">Join Now</a>
                 <a class="main-div-browse-course">Browse Course</a>
             </div>
         </div>
