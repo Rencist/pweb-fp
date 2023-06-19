@@ -11,7 +11,7 @@ if(isset($_POST['kontak_kami'])){
     $pesan = $_POST['pesan'];
 
     // buat query
-    $sql = "INSERT INTO user (user_id, judul, pesan) VALUE ('$user_id', '$judul', '$pesan')";
+    $sql = "INSERT INTO contact (user_id, judul, pesan) VALUE ('$user_id', '$judul', '$pesan')";
     $query = mysqli_query($db, $sql);
 
     // apakah query simpan berhasil?

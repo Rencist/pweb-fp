@@ -12,7 +12,7 @@ if(isset($_POST['daftar_user'])){
     $password = $_POST['password'];
 
     // buat query
-    $sql = "INSERT INTO contact (nama, email, no_telp, password) VALUE ('$nama', '$email', '$no_telp', '$password')";
+    $sql = "INSERT INTO user (nama, email, no_telp, password) VALUE ('$nama', '$email', '$no_telp', '$password')";
     $query = mysqli_query($db, $sql);
     echo($sql);
 

@@ -4,7 +4,7 @@
 -- tables
 -- Table: admission
 CREATE TABLE admission (
-    id int  NOT NULL,
+    id int  NOT NULL AUTO_INCREMENT,
     tanggal_daftar date  NOT NULL,
     user_id int  NOT NULL,
     course_id int  NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE admission (
 
 -- Table: contact
 CREATE TABLE contact (
-    id int  NOT NULL,
+    id int  NOT NULL AUTO_INCREMENT,
     judul varchar(30)  NOT NULL,
     pesan varchar(512)  NOT NULL,
     user_id int  NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE contact (
 
 -- Table: course
 CREATE TABLE course (
-    id int  NOT NULL,
+    id int  NOT NULL AUTO_INCREMENT,
     nama varchar(30)  NOT NULL,
     deskripsi varchar(512)  NOT NULL,
     harga int  NOT NULL,
@@ -34,7 +34,7 @@ CREATE TABLE course (
 
 -- Table: partner
 CREATE TABLE partner (
-    id int  NOT NULL,
+    id int  NOT NULL AUTO_INCREMENT,
     nama varchar(30)  NOT NULL,
     deskripsi varchar(512)  NOT NULL,
     CONSTRAINT partner_pk PRIMARY KEY (id)
@@ -42,7 +42,7 @@ CREATE TABLE partner (
 
 -- Table: tutor
 CREATE TABLE tutor (
-    id int  NOT NULL,
+    id int  NOT NULL AUTO_INCREMENT,
     nama varchar(30)  NOT NULL,
     email varchar(30)  NOT NULL,
     CONSTRAINT tutor_pk PRIMARY KEY (id)
@@ -50,7 +50,7 @@ CREATE TABLE tutor (
 
 -- Table: user
 CREATE TABLE user (
-    id int  NOT NULL,
+    id int  NOT NULL AUTO_INCREMENT,
     nama varchar(30)  NOT NULL,
     no_telp varchar(30)  NOT NULL,
     email varchar(30)  NOT NULL,
