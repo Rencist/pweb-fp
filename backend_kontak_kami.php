@@ -3,16 +3,15 @@
 include("config.php");
 
 // cek apakah tombol daftar sudah diklik atau blum?
-if(isset($_POST['daftar_user'])){
+if(isset($_POST['kontak_kami'])){
 
     // ambil data dari formulir
-    $nama = $_POST['nama'];
-    $email = $_POST['email'];
-    $no_telp = $_POST['no_telp'];
-    $password = $_POST['password'];
+    $user_id = $_POST['user_id'];
+    $judul = $_POST['judul'];
+    $pesan = $_POST['pesan'];
 
     // buat query
-    $sql = "INSERT INTO contact (nama, email, no_telp, password) VALUE ('$nama', '$email', '$no_telp', '$password')";
+    $sql = "INSERT INTO user (user_id, judul, pesan) VALUE ('$user_id', '$judul', '$pesan')";
     $query = mysqli_query($db, $sql);
 
     // apakah query simpan berhasil?
