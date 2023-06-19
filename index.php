@@ -32,7 +32,7 @@
                 <a class="main-div-browse-course">Browse Course</a>
             </div>
         </div>
-        <img src="/images/image.jpg" class="main-image">
+        <img src="images/image.jpg" class="main-image">
     </main> 
     
 </body>
