@@ -49,12 +49,24 @@ nav {
     color: #5B8E7D;
 }
 
+.navbar li a{
+    transition: color 0.2s ease-in-out;
+}
+.navbar li a:hover{
+    color:#f9fafb;
+}
+
 .sign-up-button{
     margin: auto 0 auto 1rem;
     background-color: #5B8E7D;
     color: #F9FAFB;
     font-size: 1rem;
     padding: 10px 28px;
+    transition: background-color 0.2s ease-out;
+}
+
+.sign-up-button:hover{
+    background-color: #4d796a;
 }
 
 .main-div{

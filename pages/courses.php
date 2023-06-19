@@ -32,7 +32,7 @@
       <?php while ($courses = mysqli_fetch_array($query)): ?>
         <div class="card">
           <div class="card-header">
-            <img src="/images/course-card.png" alt="course card">
+            <img src="../images/course-card.png" alt="course card">
             <div class="card-caption">
               <h2 class="card-caption-title"><?php echo $courses['nama'] ?></h2>
               <p class="card-caption-subtitle">
