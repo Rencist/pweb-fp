@@ -54,7 +54,7 @@
             </div>
 
             <div class="card-body-bottom">
-              <a href=<?php echo "admissions?id=".$courses['id'] ?> class="btn submit-btn">Beli</a>
+              <a href=<?php echo "admissions.php?id=".$courses['id'] ?> class="btn submit-btn">Beli</a>
             </div>
           </div>
         </div>
