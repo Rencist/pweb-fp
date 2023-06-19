@@ -1,0 +1,101 @@
+
+body{
+    background-color: #F9FAFB;
+    font-family: 'Montserrat';
+    max-height: 100vh;
+    margin: 0;
+}
+
+a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+}
+
+.container{
+    width: 80%;
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.logo{
+    color: #F9FAFB;
+    font-size: 2rem;
+    margin: auto 0;
+    font-weight: 600;
+}
+
+nav {
+    background-color: #42675A;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    max-height: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 2rem 0rem;
+    gap: 0 1rem;
+    font-size: 1.5rem;
+}
+
+.navbar li a:not(.sign-up-button){
+    color: #5B8E7D;
+}
+
+.sign-up-button{
+    margin: auto 0 auto 1rem;
+    background-color: #5B8E7D;
+    color: #F9FAFB;
+    font-size: 1rem;
+    padding: 10px 28px;
+}
+
+.main-div{
+    max-height: calc(100vh-6rem);
+    width: 50%;
+    margin: auto 0;
+}
+
+.main-div h1{
+    font-size: 5rem;
+    font-weight: 900;
+    color: #42675A;
+    margin-bottom: 0;
+}
+
+.main-div p{
+    margin-top: 1rem;
+    font-weight: 400;
+    color: #42675A;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.main-div-join-now{
+    padding: 0.7rem;
+    margin-right: 1rem;
+    background-color: #5B8E7D;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #F9FAFB;
+}
+
+.main-div-browse-course{
+    padding: 0.7rem;
+    border: 2px solid #5B8E7D;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.main-image{
+    margin: auto 0 auto auto;
+    width: 50vh;
+    max-height: 50vh;
+}
