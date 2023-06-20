@@ -14,7 +14,6 @@ if(isset($_POST['daftar_user'])){
     // buat query
     $sql = "INSERT INTO user (nama, email, no_telp, password) VALUE ('$nama', '$email', '$no_telp', '$password')";
     $query = mysqli_query($db, $sql);
-    echo($sql);
 
     // apakah query simpan berhasil?
     if( $query ) {
