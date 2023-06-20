@@ -2,6 +2,7 @@
 
 main {
   margin: 0;
+  padding-top: 68px;
   height: 100vh;
   display: flex;
   flex-direction: row;
